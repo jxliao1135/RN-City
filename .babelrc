@@ -1,0 +1,33 @@
+{
+   "plugins": [
+      [
+         "import",
+         {
+            "libraryName": "@ant-design/react-native"
+         }
+      ],
+      [
+         "module-resolver",
+         {
+            "root": [
+               "./src"
+            ],
+            "extensions": [
+               ".js",
+               ".ios.js",
+               ".android.js"
+            ],
+            "alias": {
+               "@":"./src",
+               "@components": "./src/components",
+               "@pages": "./src/components/pages",
+               "@utils": "./src/utils",
+               "@actions": "./src/actions",
+               "@constants": "./src/constants",
+               "@reducers": "./src/reducers",
+               "@store": "./src/store"
+            }
+         }
+      ]
+   ]
+}
