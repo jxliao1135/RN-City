@@ -9,23 +9,55 @@ import User from '@pages/user/User'
 
 const MainTab = createBottomTabNavigator(
    {
-      Home: Home,
-      Near: Near,
-      Find: Find,
-      User: User,
+      Home: {
+         screen: Home,
+         navigationOptions: ({ navigation }) => {
+            return {
+               tabBarLabel: '首页',
+
+            }
+         }
+      },
+      Near: {
+         screen: Near,
+         navigationOptions: ({ navigation }) => {
+            return {
+               tabBarLabel: '邻里',
+               headerRight: '',
+            }
+         }
+      },
+      Find: {
+         screen: Find,
+         navigationOptions: ({ navigation }) => {
+            return {
+               tabBarLabel: '发现',
+            }
+         }
+      },
+      User: {
+         screen: User,
+         navigationOptions: ({ navigation }) => {
+            return {
+               tabBarLabel: '我的',
+            }
+         }
+      },
    },
    {
       initialRouteName: 'Home',
       tabBarOptions: {
          activeTintColor: '#f08519',
+         inactiveTintColor:'#333333',
+         
       },
-      navigationOptions: ({ navigation:{state} }) => {
-         let { routes,index } = state
-         console.log(routes[index])
+      navigationOptions: ({ navigation: { state } }) => {
+         let { routes, index } = state
          return {
-            title: routes[index].routeName,
+            title: routes[index].routeName == 'Near' && '邻里',
+            header: routes[index].routeName != 'Near' && null,  //隐藏顶部导航栏
          }
-      }
+      },
    }
 )
 
@@ -34,18 +66,6 @@ const Navigtion = createStackNavigator(
       MainTab: {
          screen: MainTab
       },
-      Home: {
-         screen: Home,
-      },
-      Near: {
-         screen: Near,
-      },
-      Find: {
-         screen: Find,
-      },
-      User: {
-         screen: User,
-      },
       Smart: {
          screen: Smart
       },
@@ -53,20 +73,15 @@ const Navigtion = createStackNavigator(
          screen: Room,
       },
    }, {
+      initialRouteName:'MainTab',
       defaultNavigationOptions: {
-         headerStyle: {
-            backgroundColor: '#f08519',
-         },
-         headerTintColor: '#fff',
+         headerTintColor: '#000',
       },
-      navigationOptions: (args) => {
-         console.log('args', args)
-         let { navigation } = args
-         console.log(navigation.state)
+      navigationOptions: (navigation) => {
          return {
             title: navigation.state.routeName,
          }
-      }
+      },
    }
 )
 
