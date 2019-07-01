@@ -25,7 +25,8 @@
                "@actions": "./src/actions",
                "@constants": "./src/constants",
                "@reducers": "./src/reducers",
-               "@store": "./src/store"
+               "@store": "./src/store",
+               "@assets": "./src/assets"
             }
          }
       ]
