@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { StatusBar,SafeAreaView, Text, StyleSheet, View } from 'react-native'
+import { StatusBar, SafeAreaView, Text, StyleSheet, View } from 'react-native'
 import { WingBlank, Button } from '@ant-design/react-native'
 
 export default class Home extends Component {
@@ -8,7 +8,17 @@ export default class Home extends Component {
       title: 'Home',
    };
 
- 
+   componentDidMount() {
+      this.props.navigation.addListener('didFocus', () => {
+         StatusBar.setTranslucent(true)
+         
+      });
+   }
+
+   componentWillUnmount() {
+      StatusBar.setTranslucent(false)
+   }
+
    render() {
       console.log(this.props)
       let { navigation } = this.props

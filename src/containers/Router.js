@@ -59,14 +59,6 @@ const Navigtion = createStackNavigator(
          },
          headerTintColor: '#fff',
       },
-      navigationOptions: (args) => {
-         console.log('args', args)
-         let { navigation } = args
-         console.log(navigation.state)
-         return {
-            title: navigation.state.routeName,
-         }
-      }
    }
 )
 
