@@ -5,10 +5,11 @@ import Iconfont from '@components/common/iconfont/Iconfont'
 import { basicStyle } from '@utils/basicStyle'
 import Upper from './Upper'
 import http from '@utils/http'
+import { connect } from 'react-redux'
+import { fetchDevices, fetchScenes, fetchRooms, saveHouse } from '../../../actions/'
 
-console.log('http', http)
 
-export default class Home extends Component {
+class Home extends Component {
 
    constructor() {
       super()
@@ -78,20 +79,14 @@ export default class Home extends Component {
    }
    componentDidMount() {
       StatusBar.setBarStyle('light-content')
-      this.getData()
-      this.getList()
+      http.get('YongHu.aspx?op=1')
+         .then(res => {
+            console.log(res)
+         })
    }
 
    componentWillUnmount() {
 
-   }
-
-   getData() {
-      
-   }
-
-   getList() {
-      http.fetch({ url: 'https://easy-mock.com/mock/5ce214b7f562956b85fa6c37/WeChat.City/YongHu.aspx'})
    }
 
    sepa() {
@@ -99,6 +94,8 @@ export default class Home extends Component {
    }
 
    render() {
+      console.log('this.props',this.props)
+
       let { navigation } = this.props
       let { tabList, menu, downStatus } = this.state
       return (
@@ -182,3 +179,25 @@ const styles = StyleSheet.create({
       backgroundColor: '#f4f4f4'
    }
 });
+
+
+export default connect(
+   state => {
+      console.log(state)
+      return state
+   },
+   dispatch => ({
+      getDevices() {
+         dispatch(fetchDevices())
+      },
+      getScenes() {
+         dispatch(fetchScenes())
+      },
+      getRooms() {
+         dispatch(fetchRooms())
+      },
+      saveHouse(arr) {
+         dispatch(saveHouse(arr))
+      }
+   })
+)(Home)
