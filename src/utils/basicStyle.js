@@ -122,5 +122,21 @@ export const basicStyle = {
    between: 'space-between',
    center: 'center',
    row: 'row',
+   /*** zIndex ***/
+   divider: 100,
+   steps: 500,
+   tab: 600,
+   form: 700,
+   nav: 800,
+   searchBar: 800,
+   indexes: 805,
+   flotLayout: 810,
+   drawer: 900,
+   modal: 1000,
+   actionSheet: 1010,
+   picker: 1010,
+   curtain: 1080,
+   message: 1090,
+   toast: 1090,
 
 }

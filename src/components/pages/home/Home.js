@@ -4,8 +4,9 @@ import { Button, Flex, WhiteSpace, WingBlank, ListView } from '@ant-design/react
 import Iconfont from '@components/common/iconfont/Iconfont'
 import { basicStyle } from '@utils/basicStyle'
 import Upper from './Upper'
+import http from '@utils/http'
 
-
+console.log('http', http)
 
 export default class Home extends Component {
 
@@ -77,11 +78,22 @@ export default class Home extends Component {
    }
    componentDidMount() {
       StatusBar.setBarStyle('light-content')
+      this.getData()
+      this.getList()
    }
 
    componentWillUnmount() {
 
    }
+
+   getData() {
+      
+   }
+
+   getList() {
+      http.fetch({ url: 'https://easy-mock.com/mock/5ce214b7f562956b85fa6c37/WeChat.City/YongHu.aspx'})
+   }
+
    sepa() {
       return (<View style={styles.line}></View>)
    }
@@ -108,7 +120,7 @@ export default class Home extends Component {
                   alwaysBounceVertical={false}
                >
                   <Upper />
-                  <View style={{ backgroundColor: '#ffffff'}}>
+                  <View style={{ backgroundColor: '#ffffff' }}>
                      <FlatList
                         alwaysBounceVertical={false}
                         data={menu}
@@ -166,7 +178,7 @@ const styles = StyleSheet.create({
    line: {
       width: 355,
       height: 1,
-      marginHorizontal:10,
+      marginHorizontal: 10,
       backgroundColor: '#f4f4f4'
    }
 });

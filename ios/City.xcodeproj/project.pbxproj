@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -43,7 +44,7 @@
 		3AAD0EEEE5364F6DAE7982F2 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13CD35EE44E14C74AEE7E546 /* Ionicons.ttf */; };
 		434AB30850754501BAEFD46D /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C950AC0A1486478E9B0E65A2 /* Zocial.ttf */; };
 		57218A1137F4405AB8764510 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A628E8EE74F453AA99517A5 /* FontAwesome5_Regular.ttf */; };
-		69B07A4522C9BB8E00C58656 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69B07A4422C9BB8E00C58656 /* iconfont.ttf */; };
+		697008AD22CB4FE5008EA86B /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 697008AC22CB4FE5008EA86B /* iconfont.ttf */; };
 		704A1EA293144ABEAE73ADAA /* libRNVectorIcons-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B60C6524B0714D149457B8D1 /* libRNVectorIcons-tvOS.a */; };
 		75109306F4FB4411908606BC /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6D9F2C24DB044359C45F2FE /* Fontisto.ttf */; };
 		78B2AE7D30A24216B2EFA740 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF20BA915D0A4BE0B528CCAA /* MaterialIcons.ttf */; };
@@ -407,7 +408,7 @@
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		6005A370C14C453CACA5985D /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		66D4984BB7FF4AE1972EE45E /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
-		69B07A4422C9BB8E00C58656 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
+		697008AC22CB4FE5008EA86B /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		6A8BD9050BC64D3FA41F2D61 /* antfill.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = antfill.ttf; path = "../node_modules/@ant-design/icons-react-native/fonts/antfill.ttf"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
@@ -757,9 +758,9 @@
 				98081FEC4EF64CC6AA5FAB57 /* FontAwesome5_Brands.ttf */,
 				8A628E8EE74F453AA99517A5 /* FontAwesome5_Regular.ttf */,
 				AFF62EB5C5AE424C97BFA2E2 /* FontAwesome5_Solid.ttf */,
-				69B07A4422C9BB8E00C58656 /* iconfont.ttf */,
 				C6D9F2C24DB044359C45F2FE /* Fontisto.ttf */,
 				FCFC70F39A3244A8BBAAC218 /* Foundation.ttf */,
+				697008AC22CB4FE5008EA86B /* iconfont.ttf */,
 				13CD35EE44E14C74AEE7E546 /* Ionicons.ttf */,
 				DA7BA9D3D8CA435B85C9AFAD /* MaterialCommunityIcons.ttf */,
 				EF20BA915D0A4BE0B528CCAA /* MaterialIcons.ttf */,
@@ -1268,7 +1269,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				69B07A4522C9BB8E00C58656 /* iconfont.ttf in Resources */,
+				697008AD22CB4FE5008EA86B /* iconfont.ttf in Resources */,
 				F777205BF0AB4F07953EC98F /* antfill.ttf in Resources */,
 				F9F0507395E14641AEC18C85 /* antoutline.ttf in Resources */,
 				04C497030498465184FB9BA8 /* AntDesign.ttf in Resources */,
