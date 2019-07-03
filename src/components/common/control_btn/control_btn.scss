@@ -1,0 +1,21 @@
+@import '../../assets/styles/vairable.scss';
+
+.control-btn{
+   @include top-line;
+}
+
+.control-btn>View {
+  padding: $spacing-h-lg 0;
+  flex: 1;
+  text-align: center;
+}
+.iconfont{
+   padding:10px;
+}
+.iconfont.off {
+  color: $color-gray-light;
+}
+
+.iconfont.on {
+  color: $color;
+}

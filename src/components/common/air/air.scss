@@ -1,0 +1,20 @@
+@import '../../assets/styles/vairable.scss';
+
+.air-temp {
+  text-align: center;
+  padding: $spacing-h-md;
+  @include top-line;
+}
+
+.cold {
+  color: $color-cold;
+}
+
+.warm {
+  color: $color-warm;
+}
+
+.air-tips-icon>.iconfont {
+  font-size: $iconfont-min;
+  margin: 0 $spacing-h-sm;
+}

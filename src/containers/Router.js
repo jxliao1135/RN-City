@@ -1,15 +1,15 @@
 
 import React, { Component } from 'react'
 import { createStackNavigator, createAppContainer, createBottomTabNavigator } from "react-navigation";
-import Smart from '@pages/smart/Smart'
-import Room from '@pages/room/Room'
-import Home from '@pages/home/Home'
-import Near from '@pages/near/Near'
-import Find from '@pages/find/Find'
-import User from '@pages/user/User'
-import Scenes from '@pages/scenes/Scenes'
-import Run from '@pages/run/Run'
-import Iconfont from '@components/common/iconfont/Iconfont'
+import Smart from '@pages/smart/'
+import Room from '@pages/room/'
+import Home from '@pages/home/'
+import Near from '@pages/near/'
+import Find from '@pages/find/'
+import User from '@pages/user/'
+import Scenes from '@pages/scenes/'
+import Run from '@pages/run/'
+import Iconfont from '@components/common/iconfont/'
 
 const MainTab = createBottomTabNavigator(
    {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Text, StyleSheet, View, Image } from 'react-native'
 import { Button, Flex, WhiteSpace } from '@ant-design/react-native';
-import Iconfont from '@components/common/iconfont/Iconfont'
+import Iconfont from '@components/common/iconfont/'
 import { basicStyle } from '@utils/basicStyle'
 
 export default class Upper extends Component {
@@ -42,7 +42,7 @@ export default class Upper extends Component {
                </Flex>
                <Flex justify="start">
                   <View>
-                     <Iconfont name="addres_block" color="#f08519" size={20} />
+                     <Iconfont name="addres_fill" color="#f08519" size={20} />
                   </View>
                   <View>
                      <Text style={[styles.addres, styles.white]}>501</Text>

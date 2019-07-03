@@ -1,0 +1,19 @@
+@import '../../assets/styles/vairable.scss';
+
+.control-btn {
+  padding: $spacing-v-lg 0;
+  background-color: #fff;
+}
+
+.control-btn>.iconfont {
+  flex: 1;
+  color: $color;
+  font-size: $iconfont-base;
+  text-align: center;
+  line-height: $iconfont-max
+}
+
+.control-btn>.iconfont.icon-music-play,
+.control-btn>.iconfont.icon-music-pause {
+  font-size: $iconfont-max;
+}

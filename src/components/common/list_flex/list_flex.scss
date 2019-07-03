@@ -1,0 +1,51 @@
+@import '../../assets/styles/vairable.scss';
+
+//list-grid 布局的组件样式
+
+.list-warp {
+  background-color: #fff;
+}
+
+.list{
+  width: 100%;
+  padding: 0 10px;
+  flex-wrap: wrap;
+}
+
+.list-item {
+  width: 25%;
+  padding: $spacing-v-md 0;
+  text-align: center;
+  position: relative;
+
+  .list-item-text {
+    font-size: $font-size-base;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+  }
+
+  .iconfont {
+    height: 80px;
+    color: $color;
+  }
+}
+
+.list-item::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  background-color: $color-line-gray;
+}
+
+.list-item-img {
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin: 10px auto;
+  margin-bottom: 30px;
+  @include bg-style
+}
