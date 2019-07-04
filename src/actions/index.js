@@ -73,7 +73,6 @@ export function fetchRooms() {
 }
 
 //显示或隐藏loading
-export const loading = (item) => {
-   console.log('提交了actions')
-   return { type: LOADING_VISABLE, payload: item }
+export const loadingVisable = (bool) => {
+   return { type: LOADING_VISABLE, payload: bool }
 }

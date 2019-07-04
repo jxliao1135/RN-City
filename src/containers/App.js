@@ -13,7 +13,7 @@ export default class App extends Component {
       return (
          <Provider store={store}>
             <AppContainer />
-            <Loading visable={store.getState().loading} />
+            <Loading/>
          </Provider>
       )
    }

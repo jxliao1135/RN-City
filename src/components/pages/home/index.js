@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { FlatList, ScrollView, Platform, StatusBar, Text, StyleSheet, View} from 'react-native'
+import { FlatList, ScrollView, Platform, StatusBar, Text, StyleSheet, View } from 'react-native'
 import Iconfont from '@components/common/iconfont/'
 import { basicStyle } from '@utils/basicStyle'
 import Upper from './Upper'

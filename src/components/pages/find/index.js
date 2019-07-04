@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Text, StyleSheet, View, Button } from 'react-native'
 import { connect } from 'react-redux'
-import { loading } from '@actions/'
+import { loadingVisable } from '@actions/'
 
 class Find extends Component {
    constructor() {
@@ -14,13 +14,15 @@ class Find extends Component {
    componentDidMount() {
 
    }
-   btn(){
-      loading(true)
+   componentWillUpdate() {
+      
+   }
+   btn = () => {
+      let { loadingVisable } = this.props
+      loadingVisable(true)
    }
 
    render() {
-      let { visable, loading } = this.props
-      console.log('this.props',this.props)
       return (
          <View style={styles.container}>
             <Text> Find </Text>
@@ -42,8 +44,8 @@ const styles = StyleSheet.create({
 export default connect(
    state => state,
    dispatch => ({
-      loading(item) {
-         dispatch(loading(item))
+      loadingVisable(item) {
+         dispatch(loadingVisable(item))
       }
    })
 )(Find)

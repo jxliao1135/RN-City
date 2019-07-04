@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { Text, StyleSheet, View, ActivityIndicator, TouchableHighlight, Modal } from 'react-native'
+import { connect } from 'react-redux'
+import { loadingVisable } from '@actions/'
 
-export default class Loading extends Component {
+class Loading extends Component {
    constructor(props) {
       super(props)
       this.state = {
@@ -9,24 +11,26 @@ export default class Loading extends Component {
       }
    }
 
-   componentDidMount() {
-      let { visable } = this.props
-      if (visable) this.setState({ visable })
+   componentWillReceiveProps(nextProps){
+      let { loading, loadingVisable } = nextProps
+      if (!loading) return
+      setTimeout(() => {
+         let {loading} = this.props
+         if(loading) loadingVisable(false)
+      }, 6000);
    }
 
-   componentWillReceiveProps({ visable }) {
-      console.log('componentWillReceiveProps', visable)
-      if (visable) this.setState({ visable })
+   componentDidUpdate(prevProps, prevState) {
+      
    }
 
    render() {
-      let { visable } = this.state
-      console.log('visable', visable)
+      let { loading } = this.props
       return (
          <Modal
             animationType="fade"
             transparent
-            visible={visable}
+            visible={loading}
          >
             <View style={styles.container}>
                <ActivityIndicator size="large" color="#000" />
@@ -43,3 +47,13 @@ const styles = StyleSheet.create({
       alignItems: 'center',
    },
 });
+
+
+export default connect(
+   state => state,
+   dispatch => ({
+      loadingVisable(item) {
+         dispatch(loadingVisable(item))
+      }
+   })
+)(Loading)
