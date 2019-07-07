@@ -1,12 +1,13 @@
 
 import React, { Component } from 'react'
 import { createStackNavigator, createAppContainer, createBottomTabNavigator } from "react-navigation";
-import Smart from '@pages/smart/'
-import Room from '@pages/room/'
+import Entry from '@pages/entry/'
 import Home from '@pages/home/'
 import Near from '@pages/near/'
 import Find from '@pages/find/'
 import User from '@pages/user/'
+import Smart from '@pages/smart/'
+import Room from '@pages/room/'
 import Scenes from '@pages/scenes/'
 import Run from '@pages/run/'
 import Iconfont from '@components/common/iconfont/'
@@ -78,6 +79,14 @@ const MainTab = createBottomTabNavigator(
 
 const Navigtion = createStackNavigator(
    {
+      Entry: {
+         screen: Entry,
+         navigationOptions: ({ navigation }) => {
+            return {
+               header: null
+            }
+         }
+      },
       MainTab: {
          screen: MainTab
       },
@@ -94,7 +103,7 @@ const Navigtion = createStackNavigator(
          screen: Run
       }
    }, {
-      initialRouteName: 'MainTab',
+      initialRouteName: 'Entry',
       defaultNavigationOptions: {
          headerTintColor: '#000',
       },
