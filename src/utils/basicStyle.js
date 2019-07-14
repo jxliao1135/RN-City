@@ -52,6 +52,8 @@ export const basicStyle = {
    iconBlack: '#262626',
 
    /** space **/
+   //外边距
+   margin:10,
    // 上边距
    marginTop: 10,
    // 左边距
@@ -62,6 +64,10 @@ export const basicStyle = {
    marginRight: 10,
    // 内边距
    padding: 10,
+   //垂直距离
+   vertical:10,
+   //水平距离
+   horizontal:10,
    // 导航的leftItem的左间距
    navMarginLeft: 15,
    // 导航的rightItem的右间距

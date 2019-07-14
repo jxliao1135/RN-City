@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { Text, StyleSheet, View, Button, Modal, SafeAreaView } from 'react-native'
 import { Carousel, Tabs } from '@ant-design/react-native';
 import { basicStyle } from '@utils/basicStyle'
+import Login from './login'
+import Register from './register'
 
 export default class Entry extends Component {
    constructor(props) {
@@ -80,15 +82,14 @@ export default class Entry extends Component {
                   <Tabs
                      tabs={floatBtnList}
                      page={status}
-                     tabBarUnderlineStyle={{ 'backgroundColor':'#f08519','height':1,}}
+                     tabBarUnderlineStyle={{ 'backgroundColor': '#f08519', 'height': 1, }}
                      tabBarActiveTextColor="#f08519"
-
                   >
-                     <View>
-                        <Text>login</Text>
+                     <View style={styles.fromgroud}>
+                        <Login />
                      </View>
-                     <View>
-                        <Text>register</Text>
+                     <View style={styles.fromgroud}>
+                        <Register />
                      </View>
                   </Tabs>
                </View>
@@ -101,7 +102,7 @@ export default class Entry extends Component {
 const styles = StyleSheet.create({
    container: {
       flex: 1,
-      backgroundColor: basicStyle.bgColor,
+      backgroundColor: basicStyle.white,
       position: 'relative'
    },
    wrapper: {
@@ -123,4 +124,8 @@ const styles = StyleSheet.create({
    tabContent: {
       flex: 1,
    },
+   fromgroud: {
+      marginHorizontal: basicStyle.horizontal * 2,
+      marginTop: basicStyle.marginTop * 4,
+   }
 })
